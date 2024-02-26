@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./calc.css" />
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="block-hw">
+        <h1 class="block-hw__title">Calculator</h1>
+        <div class="block-hw__table">
+          <p class="block-hw__table-row"><span>Operation:</span></p>
+          <p class="block-hw__table-row" id="operation"></p>
+          <p class="block-hw__table-row">Result:</p>
+          <p class="block-hw__table-row" id="result"></p>
+          <p class="block-hw__table-row">Information:</p>
+          <p class="block-hw__table-row" id="info"></p>
+        </div>
+        <div class="buttons">
+          <a href="../index.html" class="link-back"><-- Go back</a>
+          <button id="btn-start">START CALC</button>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./calc.js"></script>
+</html>

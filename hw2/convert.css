@@ -1,0 +1,105 @@
+p,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 400 18px/28px Inter, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.main__title {
+  font-size: 36px;
+  padding: 16px;
+}
+
+.main__list {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+}
+
+.main__list-link {
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.block-hw {
+  color: brown;
+  margin-top: 10%;
+}
+
+.block-hw__title {
+  font-size: 36px;
+  padding: 16px;
+}
+
+.block-hw__table {
+  display: grid;
+  background-color: #eee;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  min-width: 380px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid brown;
+}
+
+.block-hw__table-row {
+  font-size: 14px;
+  padding: 12px;
+}
+
+#operation {
+  color: forestgreen;
+}
+
+#result {
+  font-size: 18px;
+  font-weight: bold;
+  color: forestgreen;
+}
+
+#info {
+  color: forestgreen;
+}
+
+#info.aborted {
+  color: red;
+}
+
+#btn-start {
+  cursor: pointer;
+  background-color: gold;
+  border: 1px solid brown;
+  border-radius: 8px;
+  font-size: 18px;
+  color: brown;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-back {
+  text-decoration: none;
+  color: dodgerblue;
+}
