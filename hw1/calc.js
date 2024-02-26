@@ -69,10 +69,13 @@ function startCalc() {
         .replace(/\.?0+$/, "")
 
       operationEl.innerHTML = actionStr
-      resultEl.innerHTML = `${value1} ${signOperation} ${value2} = ${result}`
+      const resultStr = `${value1} ${signOperation} ${value2} = ${result}`
+      resultEl.innerHTML = resultStr
       infoEl.innerHTML = "Operation is SUCCESS"
 
-      return alert("Сongratulations, your operation is successful")
+      return alert(
+        `Сongratulations, your operation is successful Result: ${resultStr}`
+      )
     } else {
       infoEl.classList.remove("aborted")
       const isContinue = confirm(
