@@ -78,6 +78,8 @@ const capitals = {
   канберра: "Австралії",
 }
 
+const tempMesForCancel = "Шкода, що Ви не захотіли ввести свій(ю)"
+
 let yearBirth = +prompt("Вкажіть свій рік народження")
 
 if (yearBirth === null) {
@@ -101,21 +103,47 @@ const messageYearBirth = `Вітаю. В цьому році вам виповн
   currentYear - yearBirth
 } років.`
 
-let city = prompt("Вкажи місто в якому ти живеш.")
-  .toLowerCase()
-  .replace(/[^a-zA-Z]/g, "")
+const valueCity = prompt("Вкажи місто в якому ти живеш.")
+let city = valueCity.toLowerCase().replace(/[^a-zA-Z]/g, "")
 console.log("1city:", city, !city)
-// if (!city) {
-//   city = "-"
-// }
+if (!city) {
+  city = "-"
+}
 console.log("2city:", city, city in capitals)
 
 const messageCity = true ? `Ти живеш у столиці...` : `ти живеш у місті ${city}`
 
-const favoriteSport = prompt(
+let valueFavSport = prompt(
   "Який твій улюблений вид спорту серед перелічених: Футбол, Шахи, Бокс"
 )
-console.log(favoriteSport)
-const favSportMessage = ``
+
+let favSport = valueFavSport.trim().toLowerCase()
+
+if (!favSport) {
+  alert(`${tempMesForCancel} улюблений вид спорту`)
+}
+
+if (favSport === "футбол" || favSport === "шахи" || favSport === "бокс") {
+  valueFavSport = prompt(
+    "Такого спорту не вказано в переліку: Футбол, Шахи, Бокс"
+  )
+}
+
+console.log("valueFavSport:", valueFavSport)
+
+let champion
+
+switch (favoriteSport) {
+  case "футбол":
+    champion = "Дієго Марадона"
+  case "футбол":
+    champion = "Дієго Марадона"
+  case "футбол":
+    champion = "Дієго Марадона"
+}
+
+const favSportMessage = true
+  ? `Круто! Хочеш стати як ${champion}`
+  : `Твій улюблений вид спорту ${favSport}`
 
 alert(`${messageYearBirth} ${messageCity} ${favSportMessage}`)
