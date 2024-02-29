@@ -197,7 +197,7 @@ function getFavSport(cancelMsg) {
       champion = "як Гарі Каспаров"
       break
     case "бокс":
-      champion = "як Микола Валуєв"
+      champion = "як Майк Тайсон"
       break
     default:
       champion = "професійним спортсменом"
