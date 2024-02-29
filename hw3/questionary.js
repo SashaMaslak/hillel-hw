@@ -78,72 +78,132 @@ const capitals = {
   канберра: "Австралії",
 }
 
-const tempMesForCancel = "Шкода, що Ви не захотіли ввести свій(ю)"
-
-let yearBirth = +prompt("Вкажіть свій рік народження")
-
-if (yearBirth === null) {
-  yearBirth = "-"
-}
-
-if (isNaN(yearBirth)) {
-  yearBirth = +prompt(
-    "Ви ввели не числове значення. Введіть свій рік народження в діапазоні від 1900 до 2024"
+function getMessageAge(cancelMsg) {
+  const tempMesForCancel = "Шкода, що Ви не захотіли ввести"
+  const yearBirthValue = prompt(
+    "Вкажіть свій рік народження в діапазоні від 1900 до 2024"
   )
+
+  console.log("yearBirthValue:", yearBirthValue)
+
+  const yearBirth = Number(yearBirthValue)
+
+  console.log("yearBirth:", yearBirth)
+
+  if (!yearBirthValue) {
+    alert(`${cancelMsg} свою дату народження`)
+    return "НАЖАЛЬ ваш рік народження не вказано."
+  }
+
+  if (isNaN(yearBirth)) {
+    alert(
+      `Ваше введене значення (${yearBirthValue}), що не є числовим значенням року. Вкажіть свій рік народження в діапазоні від 1900 до 2024`
+    )
+    getMessageAge(tempMesForCancel)
+  }
+
+  if (yearBirth > 2023 || yearBirth < 1900) {
+    if (yearBirth === 0) {
+      alert(`${cancelMsg} свою дату народження`)
+      return "НАЖАЛЬ ваш рік народження не вказано."
+    }
+    {
+      alert(
+        "Ви ввели не реалістичне значення року народження. Введіть свій рік народження в діапазоні від 1900 до 2024"
+      )
+      getMessageAge(tempMesForCancel)
+    }
+  }
+
+  const currentDate = new Date()
+  const currentYear = currentDate.getFullYear()
+
+  const age = currentYear - yearBirthValue
+
+  let yearStr
+  if (age >= 11 && age <= 14) {
+    yearStr = "років"
+  } else {
+    const lastNumYearBirth = Number(String(age).charAt(age.length - 1))
+
+    switch (lastNumYearBirth) {
+      case 1:
+        yearStr = "рік"
+        break
+      case 2:
+      case 3:
+      case 4:
+        yearStr = "роки"
+        break
+      default:
+        yearStr = "років"
+    }
+  }
+
+  return `Вітаю. В цьому році вам виповнюється ${age} ${yearStr}.`
 }
 
-if (yearBirth > 2024 || yearBirth < 1900) {
-  yearBirth = +prompt(
-    "Ви ввели не реалістичне значення року народження. Введіть свій рік народження в діапазоні від 1900 до 2024"
+function getCityName(cancelMsg) {
+  const cityValue = prompt("Вкажи місто в якому ти живеш на українській мові.")
+
+  if (!cityValue) {
+    alert(`${cancelMsg} своє місто проживання`)
+    return "НАЖАЛЬ ваше місто проживанн не вказано."
+  }
+
+  const city = cityValue.toLowerCase().replace(/[^а-яєіїґ]/g, "")
+  const newStrCity = city.charAt(0).toUpperCase() + city.slice(1)
+
+  console.log("city:", city)
+
+  return city in capitals
+    ? `Ти живеш у столиці ${capitals[city]}.`
+    : `Ти живеш у місті ${newStrCity}.`
+}
+
+function getFavSport(cancelMsg) {
+  const tempMess = "Круто! Невже ти хочеш стати"
+  const listSports = ["Футбол", "Шахи", "Бокс"]
+
+  const valueFavSport = prompt(
+    `Який твій улюблений вид спорту серед перелічених: ${listSports.join(", ")}`
   )
+
+  if (!valueFavSport) {
+    alert(`${cancelMsg} свій улюблений вид спорту на українській мові.`)
+    return "НАЖАЛЬ ваш улюбленний вид спорту не вказано."
+  }
+
+  const favSport = valueFavSport.toLowerCase().replace(/[^а-яєіїґ]/g, "")
+
+  if (favSport === "футбол" && favSport === "шахи" && favSport === "бокс") {
+    alert(
+      `Такого виду спорту не вказано в переліку, але ми поважаємо вашу думку.`
+    )
+  }
+
+  let champion
+  switch (favSport) {
+    case "футбол":
+      champion = "як Артем Мілевський"
+      break
+    case "шахи":
+      champion = "як Гарі Каспаров"
+      break
+    case "бокс":
+      champion = "як Микола Валуєв"
+      break
+    default:
+      champion = "професійним спортсменом"
+  }
+
+  return `${tempMess} ${champion}?`
 }
 
-const currentYear = 2024
-const messageYearBirth = `Вітаю. В цьому році вам виповнюється ${
-  currentYear - yearBirth
-} років.`
-
-const valueCity = prompt("Вкажи місто в якому ти живеш.")
-let city = valueCity.toLowerCase().replace(/[^a-zA-Z]/g, "")
-console.log("1city:", city, !city)
-if (!city) {
-  city = "-"
-}
-console.log("2city:", city, city in capitals)
-
-const messageCity = true ? `Ти живеш у столиці...` : `ти живеш у місті ${city}`
-
-let valueFavSport = prompt(
-  "Який твій улюблений вид спорту серед перелічених: Футбол, Шахи, Бокс"
-)
-
-let favSport = valueFavSport.trim().toLowerCase()
-
-if (!favSport) {
-  alert(`${tempMesForCancel} улюблений вид спорту`)
-}
-
-if (favSport === "футбол" || favSport === "шахи" || favSport === "бокс") {
-  valueFavSport = prompt(
-    "Такого спорту не вказано в переліку: Футбол, Шахи, Бокс"
-  )
-}
-
-console.log("valueFavSport:", valueFavSport)
-
-let champion
-
-switch (favoriteSport) {
-  case "футбол":
-    champion = "Дієго Марадона"
-  case "футбол":
-    champion = "Дієго Марадона"
-  case "футбол":
-    champion = "Дієго Марадона"
-}
-
-const favSportMessage = true
-  ? `Круто! Хочеш стати як ${champion}`
-  : `Твій улюблений вид спорту ${favSport}`
-
-alert(`${messageYearBirth} ${messageCity} ${favSportMessage}`)
+;(function main() {
+  const tempMesForCancel = "Шкода, що Ви не захотіли ввести"
+  const messageYearBirth = getMessageAge(tempMesForCancel)
+  const messageCity = getCityName(tempMesForCancel)
+  const favSportMessage = getFavSport(tempMesForCancel)
+  return alert(`${messageYearBirth} ${messageCity} ${favSportMessage}`)
+})()
