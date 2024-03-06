@@ -40,42 +40,82 @@ function hw(numberHw) {
   }
 }
 
+const arr = [
+  16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37, 46, 4, -51, 27, -63, 4, -54,
+  76, -4, 12, -35, 4, 47,
+]
+
 function hw5_1() {
-  console.log("hw5_1")
+  const countPosEl = arr.filter(el => el > 0).length
+  const sumPosEl = arr.reduce((acc, el) => (el > 0 ? (acc += el) : acc), 0)
+  alert(
+    `The array has ${countPosEl} positive elements, their total sum is ${sumPosEl}`
+  )
 }
 
 function hw5_2() {
-  console.log("hw5_2")
+  const minElement = Math.min(...arr)
+  const minIndex = arr.indexOf(minElement)
+  alert(
+    `The minimum element of the array is ${minElement}, and its index is ${minIndex}`
+  )
 }
 
 function hw5_3() {
-  console.log("hw5_3")
+  const maxEl = arr.slice().sort((a, b) => b - a)[0]
+  const maxIndex = arr.findIndex(el => el === maxEl)
+  alert(
+    `The maximum element of the array is ${maxEl}, and its index is ${maxIndex}`
+  )
 }
 
 function hw5_4() {
-  console.log("hw5_4")
+  let negativeCount = 0
+  arr.forEach(num => {
+    if (num < 0) {
+      negativeCount++
+    }
+  })
+  alert(`The array has ${negativeCount} negative elements.`)
 }
 
 function hw5_5() {
-  console.log("hw5_5")
+  const countEl = arr.filter(i => i > 0 && i % 2 !== 0)
+  alert(`The array has ${countEl.length} odd and positive elements.`)
 }
 
 function hw5_6() {
-  console.log("hw5_6")
+  alert(
+    `The array has ${
+      arr.filter(i => i > 0 && i % 2 === 0).length
+    } even and positive elements.`
+  )
 }
 
 function hw5_7() {
-  console.log("hw5_7")
+  const sumEvenPosEl = arr
+    .filter(i => i > 0 && i % 2 === 0)
+    .reduce((acc, i) => (acc += i))
+  alert(`The sum of even positive array elements is ${sumEvenPosEl}`)
 }
 
 function hw5_8() {
-  console.log("hw5_8")
+  const sumOddPosEl = arr.reduce((acc, i) => {
+    if (i > 0 && i % 2 !== 0) return (acc += i)
+    else return acc
+  }, 0)
+  alert(`The sum of odd positive array elements is ${sumOddPosEl}`)
 }
 
 function hw5_9() {
-  console.log("hw5_9")
+  const multPosEl = arr.filter(i => i > 0).reduce((acc, i) => (acc *= i))
+  alert(`The multiplication of positive array elements is ${multPosEl}`)
 }
 
 function hw5_10() {
-  console.log("hw5_10")
+  const maxElement = Math.max(...arr)
+  const zeroedArr = arr.map(i => (i === maxElement ? i : 0))
+  alert(
+    `The largest among the elements of the array is ${maxElement}, and the rest are zeroed: ${zeroedArr}.`
+  )
 }
