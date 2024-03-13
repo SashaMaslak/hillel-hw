@@ -13,6 +13,7 @@ h6 {
 
 body {
   font: 400 18px/28px Inter, sans-serif;
+  position: relative;
 }
 
 .main {
@@ -35,4 +36,29 @@ body {
 .main__list-link {
   font-size: 16px;
   color: dodgerblue;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.goback-button {
+  position: fixed;
+  top: 32px;
+  left: 32px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.goback-button:hover {
+  background-color: #0056b3;
 }
