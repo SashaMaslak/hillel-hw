@@ -16,10 +16,29 @@
 
 .hw-title {
   font-size: 64px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
+}
+
+.inputs_block {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
 .block-hw__item {
   cursor: pointer;
   font-size: 24px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent; /* Змініть це значення для регулювання розміру трикутника */
+  border-bottom: 10px solid transparent; /* Змініть це значення для регулювання розміру трикутника */
+  border-left: 20px solid white; /* Змініть це значення для регулювання розміру трикутника та його колір */
+  margin-right: 8px;
+}
+
+#custoinputGroup-sizing-defaultm-span {
+  background-color: green;
 }
