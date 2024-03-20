@@ -4,5 +4,5 @@ const removeElement = (array, ...args) => array.filter(el => !args.includes(el))
 
 const linkHWItem_1 = document.getElementById(`hw7_1`)
 linkHWItem_1.addEventListener("click", () =>
-  console.log(removeElement(array, 4, 3))
+  console.log(removeElement(array, 4,3))
 )

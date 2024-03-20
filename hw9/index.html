@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./lockFunc.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Locking Function</title>
+  </head>
+  <body>
+    <button class="goback-button" onclick="goBack()"><-- Go Back</button>
+    <section class="container">
+      <h1 class="hw-title">Homework 9</h1>
+      <div class="inputs_block">
+        <div class="input-group mb-3">
+          <span
+            style="background-color: #007bff; color: white"
+            class="input-group-text"
+            id="inputGroup-sizing-default"
+            >Put the number in the function</span
+          >
+          <input
+            name="number"
+            type="text"
+            placeholder="input number"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+      </div>
+      <button
+        id="hw9_1"
+        type="button"
+        class="btn btn-success"
+        style="display: flex; align-items: center"
+      >
+        <span class="triangle"></span>
+        Start script Homework 9_1
+      </button>
+    </section>
+    <script src="../js/btnGoBack.js"></script>
+    <script src="./lockFunc.js"></script>
+  </body>
+</html>
