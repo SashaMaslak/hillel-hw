@@ -1,56 +1,45 @@
 import getImages from "./pixabayApi.js"
 
-window.addEventListener("load", renderImgs)
+const images = await getImages("cat")
+const imagesArr = images.map(el => el.largeImageURL)
 
-const searchForm = document.getElementById("searchForm")
+const btnNext = document.querySelector(".arrow-next")
+const btnPrev = document.querySelector(".arrow-prev")
+const imgBlock = document.querySelector(".imgBlock")
 
-async function renderImgs(event) {
-  event.preventDefault()
-  const searchInput = document.getElementById("searchInput").value
-  const images = await getImages(searchInput)
-  const imagesArr = images.map(el => el.largeImageURL)
+let count = 0
 
-  const imgBlock = document.querySelector(".imgBlock")
-  const btnNext = document.querySelector(".arrow-next")
-  const btnPrev = document.querySelector(".arrow-prev")
+const newImg = document.createElement("img")
+newImg.style.width = "600px"
+newImg.style.height = "400px"
+newImg.style.objectFit = "cover"
+newImg.setAttribute("src", imagesArr[count])
 
-  let count = 0
+imgBlock.appendChild(newImg)
 
-  const newImg = document.createElement("img")
-  newImg.style.width = "600px"
-  newImg.style.height = "400px"
-  newImg.style.objectFit = "cover"
+function showNextImg() {
+  count += 1
   newImg.setAttribute("src", imagesArr[count])
 
-  imgBlock.innerHTML = ""
-  imgBlock.appendChild(newImg)
-
-  function showNextImg() {
-    count += 1
-    newImg.setAttribute("src", imagesArr[count])
-
-    if (count > 0) {
-      btnPrev.style.display = "block"
-    }
-    if (count > imagesArr.length - 2) {
-      btnNext.style.display = "none"
-    }
+  if (count > 0) {
+    btnPrev.style.display = "block"
   }
-
-  function showPrevImg() {
-    count -= 1
-    newImg.setAttribute("src", imagesArr[count])
-
-    if (count < 1) {
-      btnPrev.style.display = "none"
-    }
-    if (count < imagesArr.length - 1) {
-      btnNext.style.display = "block"
-    }
+  if (count > imagesArr.length - 2) {
+    btnNext.style.display = "none"
   }
-
-  btnNext.addEventListener("click", showNextImg)
-  btnPrev.addEventListener("click", showPrevImg)
 }
 
-searchForm.addEventListener("submit", renderImgs)
+function showPrevImg() {
+  count -= 1
+  newImg.setAttribute("src", imagesArr[count])
+
+  if (count < 1) {
+    btnPrev.style.display = "none"
+  }
+  if (count < imagesArr.length - 1) {
+    btnNext.style.display = "block"
+  }
+}
+
+btnNext.addEventListener("click", showNextImg)
+btnPrev.addEventListener("click", showPrevImg)
