@@ -1,4 +1,4 @@
-var inputNumber = document.querySelector('input[name="number"]')
+const inputNumber = document.querySelector('input[name="number"]')
 
 function clearInputNumber() {
   inputNumber.value = ""

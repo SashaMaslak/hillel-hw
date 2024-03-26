@@ -1,7 +1,6 @@
-const apiKey = "28271863-d0d50fdaf1b013fa8dcdf01ae"
-const apiUrl = `https://pixabay.com/api/?key=${apiKey}&q=cat&per_page=5`
-
-async function fetchImg() {
+export default async function getImages(searchWord) {
+  const apiKey = "28271863-d0d50fdaf1b013fa8dcdf01ae"
+  const apiUrl = `https://pixabay.com/api/?key=${apiKey}&q=${searchWord}&per_page=7`
   try {
     const response = await fetch(apiUrl)
     if (!response.ok) {
@@ -13,9 +12,4 @@ async function fetchImg() {
     console.error("There has been a problem with your fetch operation:", error)
     return []
   }
-}
-
-export default async function getImages() {
-  const images = await fetchImg()
-  return images
 }
