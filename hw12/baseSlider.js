@@ -22,7 +22,7 @@ async function renderImgs(event) {
   newImg.style.objectFit = "cover"
   newImg.setAttribute("src", imagesArr[count])
 
-  imgBlock.innerHTML = "" // Clear previous images
+  imgBlock.innerHTML = ""
   imgBlock.appendChild(newImg)
 
   function showNextImg() {
