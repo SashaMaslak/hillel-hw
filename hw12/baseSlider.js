@@ -14,7 +14,7 @@ async function renderImgs(event) {
   const btnNext = document.querySelector(".arrow-next")
   const btnPrev = document.querySelector(".arrow-prev")
 
-  let count = Math.floor(imagesArr.length / 2)
+  let count = 0
 
   const newImg = document.createElement("img")
   newImg.style.width = "600px"
