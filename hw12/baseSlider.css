@@ -8,43 +8,66 @@
 
 .hw-title {
   font-size: 42px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .blockHw {
-  display: flex;
-  justify-content: space-between;
-  width: 600px;
-  height: 400px;
-  overflow: hidden;
   position: relative;
+  display: flex;
+  height: 80vh;
+  width: 768px;
+}
+
+.imgBlock {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .arrow {
+  position: absolute;
+  top: calc(50% - 16px);
+  fill: green;
+  color: #fff;
+}
+
+.arrow-prev {
+  left: 0px;
+}
+
+.arrow-next {
+  right: 0px;
+}
+
+.search-form {
   display: flex;
   align-items: center;
-  padding: 12px;
 }
 
-.center {
-  width: 600px; /* Фіксований розмір слайду */
-  height: 400px; /* Фіксований розмір слайду */
+#searchInput {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
 }
 
-.prev {
-  border: 1px solid gray;
-  border-radius: 50%;
-  background-color: bisque;
-  width: 64px;
-  height: 64px;
-  padding: 8px;
+#searchInput:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
-.next {
-  border: 1px solid gray;
-  border-radius: 50%;
-  background-color: bisque;
-  width: 64px;
-  height: 64px;
-  padding: 8px;
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
 }

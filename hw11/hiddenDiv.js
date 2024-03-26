@@ -5,7 +5,9 @@ function focusEventHandler() {
   newDiv.style.width = "32px"
   newDiv.style.height = "32px"
   newDiv.style.backgroundColor = "green"
-  el.insertAdjacentElement("beforebegin", newDiv)
+  newDiv.style.position = "absolute"
+  newDiv.style.right = "32px"
+  el.insertAdjacentElement("afterend", newDiv)
 }
 
 function blurEventHandler() {
