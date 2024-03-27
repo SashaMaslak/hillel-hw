@@ -1,6 +1,6 @@
 import getImages from "./pixabayApi.js"
 
-const images = await getImages("cat")
+const images = await getImages("car")
 const imagesArr = images.map(el => el.largeImageURL)
 
 const btnNext = document.querySelector(".arrow-next")
