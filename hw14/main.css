@@ -42,9 +42,24 @@
   margin-bottom: 10px;
 }
 
+.product-buy-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .product-price {
   font-size: 16px;
   color: green;
+}
+
+.product-btnBuy {
+  background-color: green;
+  color: #fff;
+  padding: 8px 32px;
+  border-radius: 5px;
 }
 
 button {
