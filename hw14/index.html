@@ -16,21 +16,41 @@
     <button class="goback-button" onclick="goBack()"><-- Go Back</button>
     <section class="container">
       <h1 class="hw-title">Homework 14</h1>
-      <div class="product-card">
-        <img
-          class="product-image"
-          src="https://upload.wikimedia.org/wikipedia/commons/1/18/German_Patriot_missile_launcher_%28cropped%29.jpg"
-          alt="Product Image"
-        />
-        <div class="product-title">Daewoo Lanos - Restyling 2024</div>
-        <div class="product-description">
-          Product description. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nulla volutpat quam a purus faucibus, eget feugiat
-          justo vestibulum.
+      <div class="products-list">
+        <div class="product-card">
+          <img
+            class="product-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/1/18/German_Patriot_missile_launcher_%28cropped%29.jpg"
+            alt="Product Image"
+          />
+          <div class="product-title">Daewoo Lanos - Restyling 2024</div>
+          <div class="product-description">
+            Product description. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Nulla volutpat quam a purus faucibus, eget feugiat
+            justo vestibulum.
+          </div>
+          <div class="product-buy-price">
+            <div class="product-price">$19.99</div>
+            <button class="product-btnBuy">Buy</button>
+          </div>
         </div>
-        <div class="product-buy-price">
-          <div class="product-price">$19.99</div>
-          <button class="product-btnBuy">Buy</button>
+        <div class="order-info">
+          <h3>Order Information:</h3>
+          <fieldset></fieldset>
+          <label for="name">ПІБ покупця:</label>
+          <input name="name" />
+          <label for="city">Місто (вибір зі списку):</label>
+          <input name="city" />
+          <label for="delivery">Склад Нової пошти для надсилання:</label>
+          <input name="delivery" />
+          <label for="payMethod"
+            >Післяплати або оплати банківської картки:</label
+          >
+          <input name="payMethod" />
+          <label for="countProducts">Кількість продукції, що купується:</label>
+          <input name="countProducts" />
+          <label for="comment">Коментар до замовлення:</label>
+          <textarea name="comment"></textarea>
         </div>
       </div>
     </section>
