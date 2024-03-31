@@ -53,6 +53,10 @@
   padding-right: 16px;
 }
 
+.product-agree {
+  flex-direction: column;
+}
+
 .product-price {
   font-size: 16px;
   color: green;
@@ -65,11 +69,26 @@
   border-radius: 5px;
 }
 
+.product-btnCancel {
+  background-color: rgb(233, 107, 107);
+  color: #fff;
+  padding: 8px 32px;
+  border-radius: 5px;
+}
+
+.product-btnAgree {
+  background-color: green;
+  color: #fff;
+  padding: 8px 32px;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
 .order-info {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-  width: 460px;
+  width: 440px;
   margin: 20px;
 }
 
@@ -81,13 +100,25 @@ label {
 input {
   display: block;
   margin-bottom: 16px;
-  min-width: 420px;
+  min-width: 400px;
+}
+
+select {
+  display: block;
+  margin-bottom: 16px;
+  min-width: 400px;
+  height: 32px;
 }
 
 textarea {
   display: block;
   margin-bottom: 16px;
-  min-width: 420px;
+  min-width: 400px;
+}
+
+.order-info__title {
+  display: flex;
+  justify-content: space-around;
 }
 
 button {

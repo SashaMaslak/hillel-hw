@@ -35,22 +35,60 @@
           </div>
         </div>
         <div class="order-info">
-          <h3>Order Information:</h3>
-          <fieldset></fieldset>
+          <div class="order-info__title">
+            <h3>Order Details:</h3>
+            <img src="./delivery.svg" alt="Опис зображення" width="36" />
+          </div>
           <label for="name">ПІБ покупця:</label>
-          <input name="name" />
+          <input name="name" type="text" />
           <label for="city">Місто (вибір зі списку):</label>
-          <input name="city" />
+          <select id="city" name="city">
+            <option value="kyiv">Київ</option>
+            <option value="lviv">Львів</option>
+            <option value="odessa">Одеса</option>
+            <option value="kharkiv">Харків</option>
+            <option value="dnipro">Дніпро</option>
+            <option value="zaporizhzhia">Запоріжжя</option>
+            <option value="ivano-frankivsk">Івано-Франківськ</option>
+          </select>
           <label for="delivery">Склад Нової пошти для надсилання:</label>
-          <input name="delivery" />
+          <input name="delivery" type="number" />
           <label for="payMethod"
-            >Післяплати або оплати банківської картки:</label
+            >Післяплата або оплата банківською карткою:</label
           >
-          <input name="payMethod" />
+          <select id="payMethod" name="payMethod">
+            <option value="afterPay">Післяплата</option>
+            <option value="cardPay">Оплата банківською карткою</option>
+          </select>
           <label for="countProducts">Кількість продукції, що купується:</label>
-          <input name="countProducts" />
+          <input name="countProducts" type="number" />
           <label for="comment">Коментар до замовлення:</label>
           <textarea name="comment"></textarea>
+          <div class="product-buy-price">
+            <button class="product-btnCancel">Cancel</button>
+            <button class="product-btnBuy">Confirm</button>
+          </div>
+        </div>
+        <div class="order-info">
+          <div class="order-info__title">
+            <h3>Order Completed:</h3>
+            <img src="./ok.svg" alt="Опис зображення" width="36" />
+          </div>
+          <p>ПІБ покупця:</p>
+          <p>1</p>
+          <p>Місто (вибір зі списку):</p>
+          <p>2</p>
+          <p>Склад Нової пошти для надсилання:</p>
+          <p>3</p>
+          <p>Післяплати або оплати банківської картки:</p>
+          <p>4</p>
+          <p>Кількість продукції, що купується:</p>
+          <p>5</p>
+          <p>Коментар до замовлення:</p>
+          <p>6</p>
+          <div class="product-buy-price product-agree">
+            <button class="product-btnAgree">I agree</button>
+          </div>
         </div>
       </div>
     </section>
