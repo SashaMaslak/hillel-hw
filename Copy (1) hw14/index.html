@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Product Card</title>
+  </head>
+  <body>
+    <button class="goback-button" onclick="goBack()"><-- Go Back</button>
+    <section class="container">
+      <h1 class="hw-title">Homework 14</h1>
+      <div class="products-list">
+        <div class="product-card">
+          <img
+            class="product-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/1/18/German_Patriot_missile_launcher_%28cropped%29.jpg"
+            alt="Product Image"
+          />
+          <div class="product-title">Daewoo Lanos - Restyling 2024</div>
+          <div class="product-description">
+            Product description. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Nulla volutpat quam a purus faucibus, eget feugiat
+            justo vestibulum.
+          </div>
+          <div class="product-buy-price">
+            <div class="product-price">$19.99</div>
+            <button class="product-btnBuy">Buy</button>
+          </div>
+        </div>
+        <div class="order-info">
+          <div class="order-info__title">
+            <h3>Order Details:</h3>
+            <img src="./delivery.svg" alt="Опис зображення" width="36" />
+          </div>
+          <label for="name">ПІБ покупця:</label>
+          <input name="name" type="text" />
+          <label for="city">Місто (вибір зі списку):</label>
+          <select id="city" name="city">
+            <option value="kyiv">Київ</option>
+            <option value="lviv">Львів</option>
+            <option value="odessa">Одеса</option>
+            <option value="kharkiv">Харків</option>
+            <option value="dnipro">Дніпро</option>
+            <option value="zaporizhzhia">Запоріжжя</option>
+            <option value="ivano-frankivsk">Івано-Франківськ</option>
+          </select>
+          <label for="delivery">Склад Нової пошти для надсилання:</label>
+          <input name="delivery" type="number" />
+          <label for="payMethod"
+            >Післяплата або оплата банківською карткою:</label
+          >
+          <select id="payMethod" name="payMethod">
+            <option value="afterPay">Післяплата</option>
+            <option value="cardPay">Оплата банківською карткою</option>
+          </select>
+          <label for="countProducts">Кількість продукції, що купується:</label>
+          <input name="countProducts" type="number" />
+          <label for="comment">Коментар до замовлення:</label>
+          <textarea name="comment"></textarea>
+          <div class="product-buy-price">
+            <button class="product-btnCancel">Cancel</button>
+            <button class="product-btnBuy">Confirm</button>
+          </div>
+        </div>
+        <div class="order-info">
+          <div class="order-info__title">
+            <h3>Order Completed:</h3>
+            <img src="./ok.svg" alt="Опис зображення" width="36" />
+          </div>
+          <p>ПІБ покупця:</p>
+          <p>1</p>
+          <p>Місто (вибір зі списку):</p>
+          <p>2</p>
+          <p>Склад Нової пошти для надсилання:</p>
+          <p>3</p>
+          <p>Післяплати або оплати банківської картки:</p>
+          <p>4</p>
+          <p>Кількість продукції, що купується:</p>
+          <p>5</p>
+          <p>Коментар до замовлення:</p>
+          <p>6</p>
+          <div class="product-buy-price product-agree">
+            <button class="product-btnAgree">I agree</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../js/btnGoBack.js"></script>
+    <script>
+      // Можна додати JavaScript код для взаємодії з картою товару, якщо потрібно
+    </script>
+  </body>
+</html>

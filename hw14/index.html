@@ -23,78 +23,100 @@
             src="https://upload.wikimedia.org/wikipedia/commons/1/18/German_Patriot_missile_launcher_%28cropped%29.jpg"
             alt="Product Image"
           />
-          <div class="product-title">Daewoo Lanos - Restyling 2024</div>
-          <div class="product-description">
-            Product description. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Nulla volutpat quam a purus faucibus, eget feugiat
-            justo vestibulum.
-          </div>
-          <div class="product-buy-price">
-            <div class="product-price">$19.99</div>
-            <button class="product-btnBuy">Buy</button>
+          <div class="product-text">
+            <div class="product-title">Daewoo Lanos - Restyling 2024</div>
+            <div class="product-description">
+              The MIM-104 Patriot is a surface-to-air missile (SAM) system, the
+              primary such system used by the United States Army and several
+              allied states. It is manufactured by the U.S. defense contractor
+              Raytheon and derives its name from the radar component of the
+              weapon system. The AN/MPQ-53 at the heart of the system is known
+              as the "Phased Array Tracking Radar to Intercept on Target,"[6]
+              which is a backronym for "Patriot". In 1984, the Patriot system
+              began to replace the Nike Hercules system as the U.S. Army's
+              primary high to medium air defense (HIMAD) system and the MIM-23
+              Hawk system as the U.S. Army's medium tactical air defense
+              system.[7] In addition to these roles, Patriot has been given a
+              function in the U.S. Army's anti-ballistic missile (ABM) system.
+              As of 2016, the system is expected to stay fielded until at least
+              2040.
+            </div>
+            <div class="product-buy">
+              <div class="product-price">$19.99</div>
+              <button class="btn btn-buy">Buy</button>
+            </div>
           </div>
         </div>
-        <div class="order-info">
-          <div class="order-info__title">
+        <div class="order-info" id="details">
+          <div class="order-info-title">
             <h3>Order Details:</h3>
             <img src="./delivery.svg" alt="Опис зображення" width="36" />
           </div>
-          <label for="name">ПІБ покупця:</label>
-          <input name="name" type="text" />
-          <label for="city">Місто (вибір зі списку):</label>
-          <select id="city" name="city">
-            <option value="kyiv">Київ</option>
-            <option value="lviv">Львів</option>
-            <option value="odessa">Одеса</option>
-            <option value="kharkiv">Харків</option>
-            <option value="dnipro">Дніпро</option>
-            <option value="zaporizhzhia">Запоріжжя</option>
-            <option value="ivano-frankivsk">Івано-Франківськ</option>
-          </select>
-          <label for="delivery">Склад Нової пошти для надсилання:</label>
-          <input name="delivery" type="number" />
-          <label for="payMethod"
-            >Післяплата або оплата банківською карткою:</label
-          >
-          <select id="payMethod" name="payMethod">
-            <option value="afterPay">Післяплата</option>
-            <option value="cardPay">Оплата банківською карткою</option>
-          </select>
-          <label for="countProducts">Кількість продукції, що купується:</label>
-          <input name="countProducts" type="number" />
-          <label for="comment">Коментар до замовлення:</label>
-          <textarea name="comment"></textarea>
-          <div class="product-buy-price">
-            <button class="product-btnCancel">Cancel</button>
-            <button class="product-btnBuy">Confirm</button>
+          <div class="form">
+            <div class="form-section">
+              <label for="name">ПІБ покупця:</label>
+              <input name="name" type="text" />
+              <label for="city">Місто (вибір зі списку):</label>
+              <select id="city" name="city">
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="odessa">Одеса</option>
+                <option value="kharkiv">Харків</option>
+                <option value="dnipro">Дніпро</option>
+                <option value="zaporizhzhia">Запоріжжя</option>
+                <option value="ivano-frankivsk">Івано-Франківськ</option>
+              </select>
+              <label for="delivery">Склад Нової пошти для надсилання:</label>
+              <input name="delivery" type="number" />
+            </div>
+            <div class="form-section">
+              <label for="payMethod"
+                >Післяплата або оплата банківською карткою:</label
+              >
+              <select id="payMethod" name="payMethod">
+                <option value="afterPay">Післяплата</option>
+                <option value="cardPay">Оплата банківською карткою</option>
+              </select>
+              <label for="countProducts"
+                >Кількість продукції, що купується:</label
+              >
+              <input name="countProducts" type="number" />
+              <label for="comment">Коментар до замовлення:</label>
+              <textarea name="comment"></textarea>
+            </div>
+          </div>
+          <div class="product-buy confirm-buy">
+            <button class="btn-cancel">Cancel</button>
+            <button class="btn btn-confirm">Confirm</button>
           </div>
         </div>
-        <div class="order-info">
-          <div class="order-info__title">
+        <div class="order-info" id="completed">
+          <div class="order-info-title">
             <h3>Order Completed:</h3>
             <img src="./ok.svg" alt="Опис зображення" width="36" />
           </div>
-          <p>ПІБ покупця:</p>
-          <p>1</p>
-          <p>Місто (вибір зі списку):</p>
-          <p>2</p>
-          <p>Склад Нової пошти для надсилання:</p>
-          <p>3</p>
-          <p>Післяплати або оплати банківської картки:</p>
-          <p>4</p>
-          <p>Кількість продукції, що купується:</p>
-          <p>5</p>
-          <p>Коментар до замовлення:</p>
-          <p>6</p>
-          <div class="product-buy-price product-agree">
-            <button class="product-btnAgree">I agree</button>
+          <div class="form">
+            <div class="form-section">
+              <p>ПІБ покупця:</p>
+              <p>1</p>
+              <p>Місто (вибір зі списку):</p>
+              <p>2</p>
+              <p>Склад Нової пошти для надсилання:</p>
+              <p>3</p>
+            </div>
+            <div class="form-section">
+              <p>Післяплати або оплати банківської картки:</p>
+              <p>4</p>
+              <p>Кількість продукції, що купується:</p>
+              <p>5</p>
+              <p>Коментар до замовлення:</p>
+              <p>6</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <script src="../js/btnGoBack.js"></script>
-    <script>
-      // Можна додати JavaScript код для взаємодії з картою товару, якщо потрібно
-    </script>
+    <script src="./main.js"></script>
   </body>
 </html>
