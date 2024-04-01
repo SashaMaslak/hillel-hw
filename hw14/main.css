@@ -28,6 +28,7 @@ body {
 .product-card {
   display: flex;
   border: 1px solid #ccc;
+  align-items: center;
   border-radius: 5px;
   padding: 10px;
   margin: 20px;
@@ -38,8 +39,8 @@ body {
 }
 
 .product-image {
-  width: 240px;
-  height: auto;
+  width: 270px;
+  height: 216px;
 }
 
 .product-title {
@@ -99,8 +100,7 @@ body {
 
 #details {
   display: none;
-  transition: transform 0.000025s all;
-  transform: translateY(-100%);
+  animation: slideDownAnimation 1s ease;
 }
 
 #details.show {
@@ -110,13 +110,23 @@ body {
 
 #completed {
   display: none;
-  transition: transform 0.000025s all;
-  transform: translateY(-100%);
+  animation: slideDownAnimation 1s ease;
 }
 
 #completed.show {
   display: block;
   transform: translateY(0);
+}
+
+@keyframes slideDownAnimation {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .order-info-title {
