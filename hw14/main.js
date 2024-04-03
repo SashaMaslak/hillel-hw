@@ -6,7 +6,9 @@ const completedBlock = document.getElementById("completed")
 
 const formObj = {}
 
-document.querySelector(".btn-buy").addEventListener("click", function () {
+const btnConfirm = document.querySelector(".btn-confirm")
+const btnBuy = document.querySelector(".btn-buy")
+btnBuy.addEventListener("click", function () {
   detailsBlock.classList.add("show")
   window.scrollBy({
     top: 300,
@@ -14,7 +16,8 @@ document.querySelector(".btn-buy").addEventListener("click", function () {
   })
 })
 
-document.querySelector(".btn-cancel").addEventListener("click", function () {
+const btnCancel = document.querySelector(".btn-cancel")
+btnCancel.addEventListener("click", function () {
   detailsBlock.classList.remove("show")
 })
 
@@ -24,7 +27,9 @@ function submitForm(event) {
   const formData = new FormData(this)
   formData.forEach((value, key) => (formObj[key] = value))
 
-  console.log(formObj)
+  btnBuy.setAttribute("disabled", "")
+  btnCancel.setAttribute("disabled", "")
+  btnConfirm.setAttribute("disabled", "")
 
   document.querySelector(".nameField").textContent = `${formObj.name}`
   document.querySelector(".cityField").textContent = `${formObj.city}`
