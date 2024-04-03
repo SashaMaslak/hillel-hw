@@ -22,9 +22,6 @@ body {
   text-align: center;
 }
 
-.products-list {
-}
-
 .product-card {
   display: flex;
   border: 1px solid #ccc;
@@ -70,17 +67,18 @@ body {
 }
 
 .btn {
-  background-color: green;
   color: #fff;
   padding: 8px 32px;
   border-radius: 5px;
 }
 
+.btn-buy,
+.btn-confirm {
+  background-color: green;
+}
+
 .btn-cancel {
   background-color: rgb(233, 107, 107);
-  color: #fff;
-  padding: 8px 32px;
-  border-radius: 5px;
 }
 
 .product-btnAgree {
@@ -135,6 +133,10 @@ body {
   gap: 24px;
 }
 
+.order-info-subtitle {
+  text-align: center;
+}
+
 .form-fields {
   display: flex;
   gap: 24px;
@@ -144,25 +146,45 @@ body {
   min-width: 400px;
 }
 
-label {
+.red-star {
+  color: red;
+}
+
+.label {
   display: block;
   margin-bottom: 6px;
 }
 
-input {
+.input-text,
+.input-number {
   display: block;
   margin-bottom: 16px;
   min-width: 400px;
 }
 
-select {
+.radio-block {
   display: block;
   margin-bottom: 16px;
   min-width: 400px;
   height: 32px;
 }
 
-textarea {
+.pay-method {
+  margin-bottom: 4px;
+}
+
+/* .radio {
+  display: block;
+} */
+
+.select {
+  display: block;
+  margin-bottom: 16px;
+  min-width: 400px;
+  height: 32px;
+}
+
+.comment {
   display: block;
   margin-bottom: 16px;
   min-width: 400px;

@@ -55,40 +55,77 @@
           <form id="form">
             <div class="form-fields">
               <div class="form-section">
-                <label for="name">ПІБ покупця:</label>
-                <input name="name" type="text" />
-                <label for="city">Місто (вибір зі списку):</label>
-                <select id="city" name="city">
-                  <option value="kyiv">Київ</option>
-                  <option value="lviv">Львів</option>
-                  <option value="odessa">Одеса</option>
-                  <option value="kharkiv">Харків</option>
-                  <option value="dnipro">Дніпро</option>
-                  <option value="zaporizhzhia">Запоріжжя</option>
-                  <option value="ivano-frankivsk">Івано-Франківськ</option>
+                <label for="name"
+                  >ПІБ покупця: <span class="red-star">*</span></label
+                >
+                <input class="input-text" name="name" type="text" required />
+                <label for="city"
+                  >Місто (вибір зі списку):
+                  <span class="red-star">*</span></label
+                >
+                <select id="city" name="city" class="select">
+                  <option value="Київ">Київ</option>
+                  <option value="Львів">Львів</option>
+                  <option value="Одеса">Одеса</option>
+                  <option value="Харків">Харків</option>
+                  <option value="Дніпро">Дніпро</option>
+                  <option value="Запоріжжя">Запоріжжя</option>
+                  <option value="Івано-Франківськ">Івано-Франківськ</option>
                 </select>
-                <label for="delivery">Склад Нової пошти для надсилання:</label>
-                <input name="delivery" type="number" />
+                <label for="delivery"
+                  >Склад Нової пошти для надсилання:
+                  <span class="red-star">*</span></label
+                >
+                <input
+                  class="input-number"
+                  name="delivery"
+                  type="number"
+                  required
+                />
               </div>
               <div class="form-section">
-                <label for="payMethod"
-                  >Післяплата або оплата банківською карткою:</label
+                <label for="payMethod" class="pay-method"
+                  >Післяплата або оплата банківською карткою:
+                  <span class="red-star">*</span></label
                 >
-                <select id="payMethod" name="payMethod">
-                  <option value="afterPay">Післяплата</option>
-                  <option value="cardPay">Оплата банківською карткою</option>
-                </select>
+                <div class="radio-block">
+                  <input
+                    class="radio"
+                    type="radio"
+                    id="contactChoice1"
+                    name="payMethod"
+                    value="Післяплата"
+                    required
+                  />
+                  <label>Післяплата</label>
+                  <br />
+                  <input
+                    class="radio"
+                    type="radio"
+                    id="contactChoice2"
+                    name="payMethod"
+                    value="Оплата банківською карткою"
+                    required
+                  />
+                  <label>Оплата банківською карткою</label>
+                </div>
                 <label for="countProducts"
-                  >Кількість продукції, що купується:</label
+                  >Кількість продукції, що купується:
+                  <span class="red-star">*</span></label
                 >
-                <input name="countProducts" type="number" />
+                <input
+                  class="input-number"
+                  name="countProducts"
+                  type="number"
+                  required
+                />
                 <label for="comment">Коментар до замовлення:</label>
-                <textarea name="comment"></textarea>
+                <textarea class="comment" name="comment"></textarea>
               </div>
             </div>
 
             <div class="product-buy confirm-buy">
-              <button type="button" class="btn-cancel">Cancel</button>
+              <button type="button" class="btn btn-cancel">Cancel</button>
               <button type="submit" class="btn btn-confirm">Confirm</button>
             </div>
           </form>
@@ -96,14 +133,18 @@
         <div class="order-info" id="completed">
           <div class="order-info-title">
             <h3>Order Completed:</h3>
+
             <img src="./ok.svg" alt="Опис зображення" width="36" />
           </div>
+          <h4 class="order-info-subtitle">
+            You ordered Daewoo Lanos - Restyling 2024
+          </h4>
           <div class="form-fields">
             <div class="form-section">
               <p class="text-template">ПІБ покупця:</p>
-              <p class="text-form nameField">1</p>
+              <p class="text-form nameField"></p>
               <p class="text-template">Місто (вибір зі списку):</p>
-              <p class="text-form cityField">2</p>
+              <p class="text-form cityField"></p>
               <p class="text-template">Склад Нової пошти для надсилання:</p>
               <p class="text-form deliveryField"></p>
             </div>
@@ -111,13 +152,13 @@
               <p class="text-template">
                 Післяплати або оплати банківської картки:
               </p>
-              <p class="text-form payMethodField">4</p>
+              <p class="text-form payMethodField"></p>
 
               <p class="text-template">Кількість продукції, що купується:</p>
-              <p class="text-form countProductsField">5</p>
+              <p class="text-form countProductsField"></p>
 
               <p class="text-template">Коментар до замовлення:</p>
-              <p class="text-form commentField">6</p>
+              <p class="text-form commentField"></p>
             </div>
           </div>
         </div>
