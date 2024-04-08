@@ -234,7 +234,7 @@ button {
 
 .incorrect-message {
   display: none;
-  left: 218px;
+  left: 33%;
   padding: 6px;
   padding-right: 18px;
   background-color: #ededed;
