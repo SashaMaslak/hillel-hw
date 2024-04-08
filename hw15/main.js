@@ -39,7 +39,7 @@ btnCloseImMesArr.forEach(btnCloseImMes => {
   })
 })
 
-inputFullName.addEventListener("blur", event => {
+inputFullName.addEventListener("change", event => {
   const valueFullName = event.target.value
 
   const isCorrectFullName = regexFullName.test(valueFullName)
@@ -49,7 +49,7 @@ inputFullName.addEventListener("blur", event => {
   }
 })
 
-inputEmail.addEventListener("blur", event => {
+inputEmail.addEventListener("change", event => {
   const valueEmail = event.target.value
 
   const isCorrectEmail = regexEmail.test(valueEmail)
@@ -58,7 +58,7 @@ inputEmail.addEventListener("blur", event => {
   }
 })
 
-inputPhone.addEventListener("blur", event => {
+inputPhone.addEventListener("change", event => {
   const valuePhone = event.target.value
 
   const isCorrectPhone = regexPhone.test(valuePhone)
