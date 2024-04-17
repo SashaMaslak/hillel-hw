@@ -179,10 +179,6 @@ body {
   margin-bottom: 4px;
 }
 
-/* .radio {
-  display: block;
-} */
-
 .select {
   display: block;
   margin-bottom: 16px;
@@ -203,22 +199,6 @@ button {
   font: inherit;
   cursor: pointer;
   outline: none;
-}
-
-.goback-button {
-  position: fixed;
-  top: 24px;
-  left: 24px;
-  background-color: #007bff;
-  color: white;
-  padding: 8px 18px;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.goback-button:hover {
-  background-color: #0056b3;
 }
 
 .text-template {
