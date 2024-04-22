@@ -1,5 +1,68 @@
+p,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  font: 400 18px/28px Inter, sans-serif;
+  position: relative;
+  overflow: hidden;
   font-size: 14px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.main__title {
+  font-size: 30px;
+  padding: 12px;
+}
+
+.main__list {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.main__list-link {
+  font-size: 16px;
+  color: dodgerblue;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.goback-button {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.goback-button:hover {
+  background-color: #0056b3;
 }
 
 .container {
