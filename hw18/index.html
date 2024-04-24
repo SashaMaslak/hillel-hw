@@ -11,14 +11,70 @@
     <div class="weather-container">
       <h1>Weather Forecast</h1>
       <div class="weather-info">
-        <div class="weather-icon">
-          <!-- Weather icon here -->
-        </div>
+        <fieldset class="fieldset">
+          <legend>Select a city:</legend>
+
+          <div>
+            <input type="radio" id="kyiv" name="city" value="kyiv" checked />
+            <label for="huey">Kyiv</label>
+          </div>
+
+          <div>
+            <input type="radio" id="lviv" name="city" value="lviv" />
+            <label for="dewey">Lviv</label>
+          </div>
+
+          <div>
+            <input type="radio" id="dnipro" name="city" value="dnipro" />
+            <label for="louie">Dnipro</label>
+          </div>
+
+          <div>
+            <input type="radio" id="kharkiv" name="city" value="kharkiv" />
+            <label for="louie">Kharkiv</label>
+          </div>
+          <div>
+            <input type="radio" id="odesa" name="city" value="odesa" />
+            <label for="louie">Odesa</label>
+          </div>
+          <div>
+            <input type="radio" id="donetsk" name="city" value="donetsk" />
+            <label for="louie">Donetsk</label>
+          </div>
+        </fieldset>
         <div class="weather-details">
-          <h2>City, Country</h2>
-          <p>Temperature: <span class="temperature">25°C</span></p>
-          <p>Weather: <span class="weather-description">Partly Cloudy</span></p>
-          <p>Wind: <span class="wind-speed">5 m/s</span></p>
+          <div class="title-block">
+            <h2 class="title-city">
+              <p id="city">Kyiv</p>
+              <span>,</span>
+              <p id="country">Ukraine</p>
+            </h2>
+            <img id="weather-icon" src="./img/def_icon" alt="" width="64" />
+          </div>
+          <p>
+            Weather description:
+            <span id="weather-description">Partly Cloudy</span>
+          </p>
+          <p>
+            Temperature: <span class="temp-text" id="temperature">25</span
+            ><span class="temp-text">°C</span>
+          </p>
+          <p>
+            Wind speed:
+            <span class="weather-details__item" id="wind-speed">5 m/s</span>
+          </p>
+          <p>
+            Wind degree:
+            <span class="weather-details__item" id="wind-deg">North</span>
+          </p>
+          <p>
+            Humidity:
+            <span class="weather-details__item" id="humidity">50%</span>
+          </p>
+          <p>
+            Pressure:
+            <span class="weather-details__item" id="pressure">740 </span>
+          </p>
         </div>
       </div>
     </div>

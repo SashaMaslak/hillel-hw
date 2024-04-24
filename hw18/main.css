@@ -1,3 +1,16 @@
+p,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -15,14 +28,26 @@ body {
 }
 
 .weather-container h1 {
+  background-color: #d2a4d8;
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
 .weather-info {
+  background-color: #b7cee5;
   display: flex;
-  align-items: center;
+  gap: 32px;
+}
+
+.fieldset {
+  background-color: #d5e7db;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  padding-right: 48px;
+  justify-content: space-around;
+  gap: 16px;
 }
 
 .weather-icon {
@@ -30,12 +55,29 @@ body {
   text-align: center;
 }
 
-.weather-icon img {
+/* .weather-icon img {
   max-width: 100px;
-}
+} */
 
 .weather-details {
+  background-color: rgb(218, 220, 205);
+  display: flex;
   flex: 2;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+}
+
+.title-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+#city,
+#country {
+  display: inline-flex;
 }
 
 .weather-details h2 {
@@ -43,26 +85,20 @@ body {
   color: #666;
 }
 
-.temperature {
+.temp-text {
   font-weight: bold;
   color: #ff5733;
   font-size: 24px;
 }
 
-.weather-description {
+#weather-description {
   font-style: italic;
   color: #333;
 }
 
-.wind-speed {
+.weather-details__item {
   font-style: italic;
   color: #666;
-}
-
-@media screen and (max-width: 480px) {
-  .weather-container {
-    max-width: 100%;
-  }
 }
 
 button {
