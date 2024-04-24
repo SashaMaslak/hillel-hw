@@ -28,20 +28,17 @@ body {
 }
 
 .weather-container h1 {
-  background-color: #d2a4d8;
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
 .weather-info {
-  background-color: #b7cee5;
   display: flex;
   gap: 32px;
 }
 
 .fieldset {
-  background-color: #d5e7db;
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -55,12 +52,7 @@ body {
   text-align: center;
 }
 
-/* .weather-icon img {
-  max-width: 100px;
-} */
-
 .weather-details {
-  background-color: rgb(218, 220, 205);
   display: flex;
   flex: 2;
   flex-direction: column;
