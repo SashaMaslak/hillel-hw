@@ -1,8 +1,6 @@
 function getCityInfo(city) {
   const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=5d066958a60d315387d9492393935c19`
 
-  // const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=5d066958a60d315387d9492393935c19`
-
   fetch(apiUrl)
     .then(res => res.json())
     .then(data => {

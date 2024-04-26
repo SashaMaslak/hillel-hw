@@ -8,8 +8,9 @@
   </head>
   <body>
     <button class="goback-button" onclick="goBack()"><-- Go Back</button>
+    <h1 class="title-hw">Homework 18</h1>
     <div class="weather-container">
-      <h1>Weather Forecast</h1>
+      <h2>Weather Forecast</h2>
       <div class="weather-info">
         <fieldset class="fieldset">
           <legend>Select a city:</legend>
@@ -34,8 +35,8 @@
             <label for="louie">Berlin</label>
           </div>
           <div>
-            <input type="radio" id="athens" name="city" value="athens" />
-            <label for="louie">Athens</label>
+            <input type="radio" id="paris" name="city" value="paris" />
+            <label for="louie">Paris</label>
           </div>
           <div>
             <input type="radio" id="warsaw" name="city" value="warsaw" />
@@ -57,27 +58,31 @@
           </div>
           <p>
             Weather description:
-            <span id="weather-description">Partly Cloudy</span>
+            <span id="weather-description" class="first-letter-uppercase"
+              >----------</span
+            >
           </p>
           <p>
-            Temperature: <span class="temp-text" id="temperature">25</span
+            Temperature: <span class="temp-text" id="temperature">--</span
             ><span class="temp-text">°C</span>
           </p>
           <p>
             Wind speed:
-            <span class="weather-details__item" id="wind-speed">5 m/s</span>
+            <span class="weather-details__item" id="wind-speed"
+              >---- m/sec</span
+            >
           </p>
           <p>
             Wind degree:
-            <span class="weather-details__item" id="wind-deg">North</span>
+            <span class="weather-details__item" id="wind-deg">--°</span>
           </p>
           <p>
             Humidity:
-            <span class="weather-details__item" id="humidity">50%</span>
+            <span class="weather-details__item" id="humidity">--%</span>
           </p>
           <p>
             Pressure:
-            <span class="weather-details__item" id="pressure">740 </span>
+            <span class="weather-details__item" id="pressure">--- mm</span>
           </p>
         </div>
       </div>
