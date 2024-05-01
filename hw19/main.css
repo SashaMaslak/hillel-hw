@@ -48,16 +48,16 @@ body {
   padding: 18px;
 }
 
-.hw-container {
+.posts-container {
   max-width: 960px;
   margin: 24px auto;
   background-color: #fff;
-  padding: 20px;
+  padding: 24px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.hw-container h2 {
+.posts-container h2 {
   font-size: 32px;
   text-align: center;
   margin-bottom: 20px;
@@ -72,9 +72,10 @@ body {
 }
 
 .post-content {
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 32px;
 }
 
 .title_post {
@@ -85,8 +86,38 @@ body {
   padding: 16px;
 }
 
-.btn-show-comments {
+#inputSubmit {
   padding: 4px 8px;
   border: 1px solid black;
   border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-comments {
+  padding: 4px 8px;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.post-comments {
+  display: none;
+}
+
+.comment-card {
+  display: block;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.comment-title {
+  padding: 8px;
+}
+.comment-body {
+  padding: 8px;
+}
+.comment-email {
+  padding: 8px;
+  color: #007bff;
 }

@@ -9,7 +9,7 @@
   <body>
     <button class="goback-button" onclick="goBack()"><-- Go Back</button>
     <h1 class="title-hw">Homework 19</h1>
-    <div class="hw-container">
+    <div class="posts-container">
       <h2>Search posts</h2>
       <div class="post-block">
         <form id="form">
@@ -21,8 +21,16 @@
       <div class="post-content">
         <h3 class="title_post"></h3>
         <p class="body_post"></p>
-        <button type="button" class="btn-show-comments">Show comments</button>
+        <div style="display: flex; gap: 16px">
+          <button type="button" class="btn-comments btn-show-comments">
+            Show comments
+          </button>
+          <button disabled type="button" class="btn-comments btn-hide-comments">
+            Hide comments
+          </button>
+        </div>
       </div>
+      <div class="post-comments"></div>
     </div>
   </body>
   <script src="./btnGoBack.js"></script>
