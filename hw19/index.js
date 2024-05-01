@@ -6,15 +6,14 @@ const postContent = document.querySelector(".post-content")
 const postComments = document.querySelector(".post-comments")
 const titlePost = document.querySelector(".title_post")
 const bodyPost = document.querySelector(".body_post")
-const btnShowComments = document
-  .querySelector(".btn-show-comments")
-  .addEventListener("click", getComments)
-const btnHideComments = document
-  .querySelector(".btn-hide-comments")
-  .addEventListener("click", hideComments)
+const btnShowComments = document.querySelector(".btn-show-comments")
+btnShowComments.addEventListener("click", getComments)
+const btnHideComments = document.querySelector(".btn-hide-comments")
+btnHideComments.addEventListener("click", hideComments)
 
 function getPost(event) {
   event.preventDefault()
+  showSpinner()
   if (+inputValue.value < 1 || +inputValue.value > 100) {
     alert("Please enter a number from 1 to 100")
     return
@@ -27,14 +26,21 @@ function getPost(event) {
       postContent.style.display = "flex"
       titlePost.textContent = post.title.toUpperCase()
       bodyPost.textContent = post.body
+      hideSpinner()
     })
-    .catch(error => alert(error.message))
+    .catch(error => {
+      hideSpinner()
+      alert(error.message)
+    })
+
+  btnShowComments.removeAttribute("disabled")
+  btnHideComments.setAttribute("disabled", "")
 }
 
 function getComments() {
   const params = new URLSearchParams()
   params.append("postId", inputValue.value)
-
+  showSpinner()
   fetch("https://jsonplaceholder.typicode.com/comments?" + params)
     .then(res => res.json())
     .then(comments => {
@@ -66,10 +72,26 @@ function getComments() {
       commentCards.forEach(function (commentCard) {
         postComments.appendChild(commentCard)
       })
+      hideSpinner()
     })
-    .catch(error => alert(error.message))
+    .catch(error => {
+      hideSpinner()
+      alert(error.message)
+    })
+  btnShowComments.setAttribute("disabled", "")
+  btnHideComments.removeAttribute("disabled")
 }
 
 function hideComments() {
   postComments.innerHTML = ""
+  btnShowComments.removeAttribute("disabled")
+  btnHideComments.setAttribute("disabled", "")
+}
+
+function showSpinner() {
+  document.getElementById("spinner").style.display = "block"
+}
+
+function hideSpinner() {
+  document.getElementById("spinner").style.display = "none"
 }
