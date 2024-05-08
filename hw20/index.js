@@ -1,31 +1,78 @@
 class SuperMath {
   check(obj) {
-    const toAgree = confirm("Do you want to do a math operation (12 + 3) ?")
-    let result = ""
-    switch (obj.sign) {
+    const toAgree = confirm(
+      `Do you want to do a math operation (${obj.X} ${obj.znak} ${obj.Y}) = ?`
+    )
+    let result = 0
+    let template = ""
+    switch (obj.znak) {
       case "+":
-        result = `${obj.X} + ${obj.Y}`
+        template = `${obj.X} + ${obj.Y}`
+        result = obj.X + obj.Y
+        break
       case "-":
-        result = `${obj.X} - ${obj.Y}`
+        template = `${obj.X} - ${obj.Y}`
+        result = obj.X - obj.Y
+        break
+      case "*":
+        template = `${obj.X} * ${obj.Y}`
+        result = obj.X * obj.Y
+        break
+      case "/":
+        template = `${obj.X} / ${obj.Y}`
+        result = obj.X / obj.Y
+        break
+      case "%":
+        template = `${obj.X} % ${obj.Y}`
+        result = obj.X % obj.Y
+        break
+      default:
+        template = ""
     }
 
     if (toAgree) {
-      const result = `${obj.X} + ${obj.Y}`
-      alert(result)
+      alert(`${template} = ${result}`)
     } else {
       this.input()
     }
   }
   input() {
-    const firstNumber = prompt("INPUT First numbet:")
-    const secondNumber = prompt("INPUT Second numbet:")
-    const mathSign = prompt("INPUT one math sign (+ or - or * or /):")
+    this.count++
+    let firstNumber
+    while (isNaN(firstNumber) || firstNumber === null) {
+      firstNumber = prompt("INPUT Correct First number:")
+    }
 
-    const newObj = { X: firstNumber, Y: secondNumber, sign: mathSign }
+    let secondNumber
+    while (isNaN(secondNumber) || secondNumber === null) {
+      secondNumber = prompt("INPUT Correct Second number:")
+    }
+
+    let mathSign
+
+    while (true) {
+      mathSign = prompt(
+        "Enter one of the correct mathematical signs: +, -, /, *, %"
+      )
+      if (
+        mathSign === "+" ||
+        mathSign === "-" ||
+        mathSign === "/" ||
+        mathSign === "*" ||
+        mathSign === "%"
+      )
+        break
+    }
+
+    const newObj = {
+      X: parseFloat(firstNumber),
+      Y: parseFloat(secondNumber),
+      znak: mathSign,
+    }
 
     this.check(newObj)
   }
 }
 
 const math = new SuperMath()
-math.check({ X: 12, Y: 3, sign: "+" })
+math.check({ X: 12, Y: 3, znak: "+" })
